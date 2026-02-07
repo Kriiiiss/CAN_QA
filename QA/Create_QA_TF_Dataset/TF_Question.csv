@@ -1,0 +1,40 @@
+Category_ID,Category_Name,Question
+1,Anomalous Behavior Identification and Localization,"All CAN frames in this window have Flag equal to 0, meaning no attack labels are present."
+1,Anomalous Behavior Identification and Localization,"At least one CAN frame in this window carries a non-zero Flag, meaning at least one frame is labeled as an attack."
+1,Anomalous Behavior Identification and Localization,"Given a window where one randomly chosen frame's Flag is hidden, is the hidden frame labeled as an attack with a non-zero Flag?"
+
+2,CAN Message Identity and Role Structure,"The number of distinct CAN IDs exceeds {unique_id_threshold} in this window."
+2,CAN Message Identity and Role Structure,"More than {RARE_ID_RATIO_THRESHOLD}% of frames carry IDs that appear only once in the window (possible fuzzing)."
+2,CAN Message Identity and Role Structure,"Does this window contain a CAN ID outside the expected ID list, defined as the {EXPECTED_ID_TOP_K} most frequent IDs in the dataset baseline?"
+
+3,Traffic Volume and Distribution Characteristics,"A single CAN ID accounts for more than half of the frames in this window."
+3,Traffic Volume and Distribution Characteristics,"Some CAN ID appears more than {FLOOD_THRESHOLD} times in this window."
+3,Traffic Volume and Distribution Characteristics,"Is the window's frame rate (frames per second) above the {BASELINE_P95_PERCENTILE} percentile of the dataset baseline?"
+
+4,Temporal Behavior of CAN Communication,"Timestamps are strictly non-decreasing across consecutive frames."
+4,Temporal Behavior of CAN Communication,"Some inter-frame gap exceeds {suppression_threshold} seconds."
+4,Temporal Behavior of CAN Communication,"All inter-frame gaps stay below {flooding_threshold} seconds."
+
+5,Payload Value Patterns and Regularities,"Some CAN ID transmits an identical payload across the entire window."
+5,Payload Value Patterns and Regularities,"Does any CAN ID transmit payloads where more than {ZERO_PAYLOAD_RATIO_THRESHOLD}% of payload bytes are zero-valued across the window?"
+5,Payload Value Patterns and Regularities,"For any ID, is payload variability (variance across payload bytes) below the {BASELINE_P10_PERCENTILE} percentile of the dataset baseline?"
+
+6,Frame Format and Protocol-Level Integrity,"Does any CAN ID use a DLC value that never appears for that ID in the dataset baseline?"
+6,Frame Format and Protocol-Level Integrity,"At least {HIGH_DLC_RATIO_THRESHOLD}% of frames use DLC (data length code) ≥ 8."
+6,Frame Format and Protocol-Level Integrity,"Is the DLC distribution in this window unusually different from the dataset baseline pattern, meaning the Jensen-Shannon divergence exceeds the {BASELINE_P95_PERCENTILE} percentile of the baseline?"
+
+7,Expected and Safety-Critical Message Behavior,"Is any expected control ID missing from this window, where expected IDs are the {EXPECTED_ID_TOP_K} most frequent IDs in the dataset baseline?"
+7,Expected and Safety-Critical Message Behavior,"Is any safety-critical ID, defined as one of the {CRITICAL_ID_TOP_K} most frequent baseline IDs, transmitted at a frame rate above the {BASELINE_P95_PERCENTILE} percentile of its baseline rate?"
+7,Expected and Safety-Critical Message Behavior,"Does any critical-control ID, defined as one of the {CRITICAL_ID_TOP_K} most frequent baseline IDs, appear more than {FLOOD_THRESHOLD} times or have any frame labeled as an attack with a non-zero Flag?"
+
+8,Payload Dynamics and Baseline Plausibility,"Do any CAN IDs show payload byte values outside their baseline byte range, defined by the {BASELINE_P1_PERCENTILE} to {BASELINE_P99_PERCENTILE} percentiles of that ID in the dataset baseline?"
+8,Payload Dynamics and Baseline Plausibility,"Do any CAN IDs show payload byte changes faster than the {BASELINE_P95_PERCENTILE} percentile of that ID's baseline change rate in the dataset baseline?"
+8,Payload Dynamics and Baseline Plausibility,"Does any CAN ID exhibit a payload transition whose baseline occurrence frequency is below the {RARE_TRANSITION_PERCENTILE} percentile of that ID's baseline transition distribution?"
+
+9,Data Consistency and Logging Artifacts,"Does this window contain exact duplicate frames, meaning the same timestamp, ID, DLC, payload, and Flag appear more than once?"
+9,Data Consistency and Logging Artifacts,"Does this window show timestamp irregularities, meaning timestamps go backwards or the same timestamp is shared by at least {SHARED_TIMESTAMP_ID_THRESHOLD} different CAN IDs?"
+9,Data Consistency and Logging Artifacts,"Do many frames share the same rounded timestamp when times are rounded to {TIMESTAMP_RESOLUTION} seconds, with at least {TIMESTAMP_BUCKET_SHARE_THRESHOLD}% of frames in one bucket?"
+
+10,Attack Interpretation and Decision Signals,"Do at least {FLOOD_INDICATOR_COUNT} of the following hold: one ID exceeds {FLOOD_SIGNATURE_SHARE}% of frames; all inter-frame gaps stay below {flooding_threshold} seconds; the frame rate is above the {BASELINE_P95_PERCENTILE} percentile of the dataset baseline?"
+10,Attack Interpretation and Decision Signals,"Does this window show multiple independent signs consistent with coordinated anomalous behavior, meaning at least {COORDINATED_INDICATOR_COUNT} of these are true: non-zero Flag present; one ID exceeds half of the frames; flooding pattern present; rare-ID share exceeds {RARE_ID_RATIO_THRESHOLD}%; an expected ID is missing; high-DLC share exceeds {HIGH_DLC_RATIO_THRESHOLD}%; an inter-frame gap exceeds {suppression_threshold} seconds?"
+10,Attack Interpretation and Decision Signals,"Does this window indicate high-risk behavior involving safety-critical messages, meaning a critical-control ID anomaly and at least {HIGH_RISK_INDICATOR_COUNT} of: flooding pattern present; expected ID missing; an inter-frame gap exceeds {suppression_threshold} seconds?"

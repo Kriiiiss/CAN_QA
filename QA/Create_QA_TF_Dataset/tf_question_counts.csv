@@ -1,0 +1,31 @@
+Question,Count,True_Count,False_Count,True_Ratio
+"A single CAN ID accounts for more than half of the frames in this window.",862,56,806,0.0650
+"All CAN frames in this window have Flag equal to 0, meaning no attack labels are present.",844,504,340,0.5972
+"All inter-frame gaps stay below 0.001 seconds.",798,7,791,0.0088
+"At least 95% of frames use DLC (data length code) ≥ 8.",810,787,23,0.9716
+"At least one CAN frame in this window carries a non-zero Flag, meaning at least one frame is labeled as an attack.",800,300,500,0.3750
+"Do any CAN IDs show payload byte changes faster than the 95 percentile of that ID's baseline change rate in the dataset baseline?",832,809,23,0.9724
+"Do any CAN IDs show payload byte values outside their baseline byte range, defined by the 1 to 99 percentiles of that ID in the dataset baseline?",845,788,57,0.9325
+"Do at least 2 of the following hold: one ID exceeds 60% of frames; all inter-frame gaps stay below 0.001 seconds; the frame rate is above the 95 percentile of the dataset baseline?",837,3,834,0.0036
+"Do many frames share the same rounded timestamp when times are rounded to 0.001 seconds, with at least 10% of frames in one bucket?",807,0,807,0.0000
+"Does any CAN ID exhibit a payload transition whose baseline occurrence frequency is below the 20 percentile of that ID's baseline transition distribution?",844,0,844,0.0000
+"Does any CAN ID transmit payloads where more than 95% of payload bytes are zero-valued across the window?",804,804,0,1.0000
+"Does any CAN ID use a DLC value that never appears for that ID in the dataset baseline?",852,0,852,0.0000
+"Does any critical-control ID, defined as one of the 3 most frequent baseline IDs, appear more than 15 times or have any frame labeled as an attack with a non-zero Flag?",836,208,628,0.2488
+"Does this window contain a CAN ID outside the expected ID list, defined as the 20 most frequent IDs in the dataset baseline?",789,789,0,1.0000
+"Does this window contain exact duplicate frames, meaning the same timestamp, ID, DLC, payload, and Flag appear more than once?",814,0,814,0.0000
+"Does this window indicate high-risk behavior involving safety-critical messages, meaning a critical-control ID anomaly and at least 1 of: flooding pattern present; expected ID missing; an inter-frame gap exceeds 0.005 seconds?",875,222,653,0.2537
+"Does this window show multiple independent signs consistent with coordinated anomalous behavior, meaning at least 3 of these are true: non-zero Flag present; one ID exceeds half of the frames; flooding pattern present; rare-ID share exceeds 30%; an expected ID is missing; high-DLC share exceeds 95%; an inter-frame gap exceeds 0.005 seconds?",832,402,430,0.4832
+"Does this window show timestamp irregularities, meaning timestamps go backwards or the same timestamp is shared by at least 2 different CAN IDs?",777,0,777,0.0000
+"For any ID, is payload variability (variance across payload bytes) below the 20 percentile of the dataset baseline?",807,807,0,1.0000
+"Given a window where one randomly chosen frame's Flag is hidden, is the hidden frame labeled as an attack with a non-zero Flag?",824,121,703,0.1468
+"Is any expected control ID missing from this window, where expected IDs are the 20 most frequent IDs in the dataset baseline?",817,779,38,0.9535
+"Is any safety-critical ID, defined as one of the 3 most frequent baseline IDs, transmitted at a frame rate above the 95 percentile of its baseline rate?",888,132,756,0.1486
+"Is the DLC distribution in this window unusually different from the dataset baseline pattern, meaning the Jensen-Shannon divergence exceeds the 95 percentile of the baseline?",850,51,799,0.0600
+"Is the window's frame rate (frames per second) above the 95 percentile of the dataset baseline?",872,38,834,0.0436
+"More than 30% of frames carry IDs that appear only once in the window (possible fuzzing).",832,53,779,0.0637
+"Some CAN ID appears more than 15 times in this window.",790,247,543,0.3127
+"Some CAN ID transmits an identical payload across the entire window.",850,850,0,1.0000
+"Some inter-frame gap exceeds 0.005 seconds.",792,324,468,0.4091
+"The number of distinct CAN IDs exceeds 20 in this window.",829,826,3,0.9964
+"Timestamps are strictly non-decreasing across consecutive frames.",837,837,0,1.0000
