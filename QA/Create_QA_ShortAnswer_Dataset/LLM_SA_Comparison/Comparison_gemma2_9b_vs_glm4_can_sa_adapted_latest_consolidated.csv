@@ -1,0 +1,108 @@
+=== OVERALL COMPARISON (All SA Types) ===
+
+Attack,Total Questions,Answer Similarity (%),Answer Correct Count (>=90%),Explanation F1,Explanation ROUGE-L,Explanation Similarity (%),Explanation Correct Count (>=80%)
+DoS,458,39.18,50,0.112,0.100,43.20,11
+Fuzzy,479,35.13,39,0.100,0.090,39.74,7
+Gear,555,38.76,54,0.115,0.106,43.45,17
+RPM,577,36.10,49,0.111,0.099,42.34,13
+Combined,2069,37.27,192,0.110,0.099,42.23,48
+
+
+=== Category 1: Anomalous Behavior Identification and Localization ===
+
+Attack,Total Questions,Answer Similarity (%),Answer Correct Count (>=90%),Explanation F1,Explanation ROUGE-L,Explanation Similarity (%),Explanation Correct Count (>=80%)
+DoS,71,22.79,0,0.063,0.061,35.69,0
+Fuzzy,71,15.55,0,0.032,0.027,27.13,0
+Gear,70,16.41,0,0.037,0.032,26.34,0
+RPM,80,13.67,0,0.066,0.058,34.53,0
+Combined,292,17.00,0,0.050,0.045,31.05,0
+
+
+=== Category 2: CAN Message Identity and Role Structure ===
+
+Attack,Total Questions,Answer Similarity (%),Answer Correct Count (>=90%),Explanation F1,Explanation ROUGE-L,Explanation Similarity (%),Explanation Correct Count (>=80%)
+DoS,67,60.95,8,0.205,0.188,54.34,3
+Fuzzy,79,57.61,7,0.187,0.175,52.58,3
+Gear,103,60.95,14,0.232,0.224,54.95,8
+RPM,98,57.55,8,0.233,0.215,53.78,8
+Combined,347,59.23,37,0.217,0.203,53.96,22
+
+
+=== Category 3: Traffic Volume and Distribution Characteristics ===
+
+Attack,Total Questions,Answer Similarity (%),Answer Correct Count (>=90%),Explanation F1,Explanation ROUGE-L,Explanation Similarity (%),Explanation Correct Count (>=80%)
+DoS,97,30.20,9,0.104,0.098,35.19,3
+Fuzzy,96,32.60,12,0.094,0.088,32.79,0
+Gear,105,34.79,13,0.103,0.092,39.01,4
+RPM,121,34.48,19,0.097,0.085,34.47,1
+Combined,419,33.14,53,0.099,0.090,35.39,8
+
+
+=== Category 4: Temporal Behavior of CAN Communication ===
+
+Attack,Total Questions,Answer Similarity (%),Answer Correct Count (>=90%),Explanation F1,Explanation ROUGE-L,Explanation Similarity (%),Explanation Correct Count (>=80%)
+DoS,70,33.37,0,0.169,0.141,50.68,2
+Fuzzy,70,32.90,0,0.156,0.128,51.88,0
+Gear,83,29.80,0,0.135,0.113,44.09,2
+RPM,79,31.89,0,0.151,0.127,50.31,2
+Combined,302,31.89,0,0.152,0.127,49.05,6
+
+
+=== Category 5: Payload Value Patterns and Regularities ===
+
+Attack,Total Questions,Answer Similarity (%),Answer Correct Count (>=90%),Explanation F1,Explanation ROUGE-L,Explanation Similarity (%),Explanation Correct Count (>=80%)
+DoS,40,36.68,0,0.019,0.019,41.61,0
+Fuzzy,48,25.31,0,0.015,0.015,32.08,0
+Gear,50,31.39,0,0.023,0.023,41.46,0
+RPM,63,29.49,0,0.009,0.009,39.58,0
+Combined,201,30.40,0,0.016,0.016,38.66,0
+
+
+=== Category 6: Frame Format and Protocol-Level Integrity ===
+
+Attack,Total Questions,Answer Similarity (%),Answer Correct Count (>=90%),Explanation F1,Explanation ROUGE-L,Explanation Similarity (%),Explanation Correct Count (>=80%)
+DoS,74,62.66,33,0.113,0.091,51.09,3
+Fuzzy,66,52.29,20,0.126,0.113,51.85,4
+Gear,93,49.68,27,0.143,0.132,59.14,3
+RPM,78,50.90,22,0.129,0.115,53.99,2
+Combined,311,53.63,102,0.129,0.114,54.38,12
+
+
+=== Category 7: Expected and Safety-Critical Message Behavior ===
+
+Attack,Total Questions,Answer Similarity (%),Answer Correct Count (>=90%),Explanation F1,Explanation ROUGE-L,Explanation Similarity (%),Explanation Correct Count (>=80%)
+DoS,48,35.47,7,0.169,0.163,52.21,3
+Fuzzy,54,28.17,5,0.156,0.148,44.74,3
+Gear,49,45.28,12,0.213,0.207,52.53,5
+RPM,57,34.01,7,0.172,0.163,46.81,6
+Combined,208,35.49,31,0.177,0.169,48.87,17
+
+
+=== Category 8: Payload Dynamics and Baseline Plausibility ===
+
+Attack,Total Questions,Answer Similarity (%),Answer Correct Count (>=90%),Explanation F1,Explanation ROUGE-L,Explanation Similarity (%),Explanation Correct Count (>=80%)
+DoS,42,49.01,0,0.011,0.011,41.03,0
+Fuzzy,45,46.37,0,0.020,0.020,37.82,0
+Gear,65,46.14,0,0.010,0.010,38.75,0
+RPM,69,46.71,0,0.008,0.008,42.03,0
+Combined,221,46.91,0,0.011,0.011,40.02,0
+
+
+=== Category 9: Data Consistency and Logging Artifacts ===
+
+Attack,Total Questions,Answer Similarity (%),Answer Correct Count (>=90%),Explanation F1,Explanation ROUGE-L,Explanation Similarity (%),Explanation Correct Count (>=80%)
+DoS,56,36.05,8,0.053,0.053,43.10,0
+Fuzzy,49,28.64,1,0.051,0.051,40.89,0
+Gear,47,26.26,0,0.069,0.069,47.90,0
+RPM,55,25.81,0,0.067,0.067,44.55,0
+Combined,207,29.35,9,0.060,0.060,44.05,0
+
+
+=== Category 10: Attack Interpretation and Decision Signals ===
+
+Attack,Total Questions,Answer Similarity (%),Answer Correct Count (>=90%),Explanation F1,Explanation ROUGE-L,Explanation Similarity (%),Explanation Correct Count (>=80%)
+DoS,128,32.26,10,0.081,0.078,39.82,1
+Fuzzy,151,28.92,14,0.063,0.060,33.48,0
+Gear,160,37.45,15,0.077,0.075,35.82,0
+RPM,175,33.34,20,0.093,0.084,38.73,0
+Combined,614,33.10,59,0.079,0.074,36.91,1
