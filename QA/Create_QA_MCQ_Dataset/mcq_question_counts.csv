@@ -1,0 +1,31 @@
+Question,Count,A_Count,B_Count,C_Count,D_Count,A_Ratio,B_Ratio,C_Ratio,D_Ratio
+"After timestamp rounding, what does heavy clustering of frames most likely reflect, where heavy clustering means the largest rounded-time bucket exceeds 30% of frames at resolution 0.0001 seconds?",556,130,142,146,138,0.2338,0.2554,0.2626,0.2482
+"Compared to baseline, which statement best describes whether payload variability is concentrated in a few IDs or spread across many IDs?",550,129,144,132,145,0.2345,0.2618,0.2400,0.2636
+"Given anomalies involving safety-critical messages, what is the most appropriate risk assessment?",567,145,127,155,140,0.2557,0.2240,0.2734,0.2469
+How do payload change rates in this window compare to baseline dynamics?,522,137,115,161,109,0.2625,0.2203,0.3084,0.2088
+How does the presence of expected control IDs compare to baseline expectations?,514,130,119,128,137,0.2529,0.2315,0.2490,0.2665
+How does the set of observed CAN IDs compare to the expected baseline ID set?,545,147,136,123,139,0.2697,0.2495,0.2257,0.2550
+How does this window's overall DLC distribution compare to the dataset baseline?,542,129,130,145,138,0.2380,0.2399,0.2675,0.2546
+"How should multiple independent anomaly signals in this window be interpreted, where signals include non-zero Flag presence, missing expected ID, rare-ID share above 30%, high DLC share above 50%, or a gap above 0.001 seconds?",544,123,142,130,149,0.2261,0.2610,0.2390,0.2739
+How would you characterize the overall presence of attack labels in this window?,585,164,147,127,147,0.2803,0.2513,0.2171,0.2513
+How would you characterize the temporal spacing of frames in this window?,581,143,144,155,139,0.2461,0.2478,0.2668,0.2392
+"If a CAN ID's payload is almost entirely zero-valued across many frames, what is the best interpretation, where almost entirely means the zero-byte ratio is at least 90%?",567,166,122,120,159,0.2928,0.2152,0.2116,0.2804
+"If one frame's Flag is hidden, which inference about that hidden Flag is most consistent with the visible context?",571,118,140,154,159,0.2067,0.2452,0.2697,0.2785
+"Relative to baseline, how unusual is the overall traffic rate in this window?",515,133,109,133,140,0.2583,0.2117,0.2583,0.2718
+What best characterizes the behavior of safety-critical CAN IDs in this window?,590,147,139,152,152,0.2492,0.2356,0.2576,0.2576
+What best explains the presence of many single-appearance CAN IDs in this window?,583,159,144,138,142,0.2727,0.2470,0.2367,0.2436
+"What does the presence of rare payload transitions most strongly indicate, where rare means baseline occurrence frequency below the 5 percentile?",528,149,131,134,114,0.2822,0.2481,0.2538,0.2159
+What is the most plausible explanation for one CAN ID appearing far more frequently than others?,554,151,120,151,132,0.2726,0.2166,0.2726,0.2383
+"What is the most plausible interpretation of backward or shared timestamps, where shared means at least 3 different IDs share a timestamp?",527,139,133,136,119,0.2638,0.2524,0.2581,0.2258
+"What is the most plausible protocol-level explanation for this window, where high DLC means DLC 8 or higher and the share exceeds 50%?",564,129,157,156,122,0.2287,0.2784,0.2766,0.2163
+Which description best captures the role structure of CAN IDs in this window?,537,122,125,147,143,0.2272,0.2328,0.2737,0.2663
+Which description best fits payload value ranges observed in this window relative to baseline per-ID ranges?,569,145,150,145,129,0.2548,0.2636,0.2548,0.2267
+"Which logging artifact best explains repeated identical frames in this window, where repeated identical means the same timestamp, ID, DLC, payload, and Flag appear more than 2 times?",575,162,143,133,137,0.2817,0.2487,0.2313,0.2383
+"Which overall interpretation best fits a window exhibiting flooding-related indicators defined as: one ID exceeds 60% of frames, all inter-frame gaps are below 0.0005 seconds, and the frame rate is above the 95 percentile of baseline?",540,125,141,142,132,0.2315,0.2611,0.2630,0.2444
+Which pattern best describes how attack-labeled frames are distributed within this window?,549,125,141,132,151,0.2277,0.2568,0.2404,0.2750
+Which payload behavior is most evident for at least one CAN ID that appears at least 5 times in this window?,545,142,137,127,139,0.2606,0.2514,0.2330,0.2550
+"Which risk interpretation best fits anomalies involving critical-control IDs, where additional risk indicators include flooding signature, missing expected ID, or a large inter-frame gap?",541,138,120,133,150,0.2551,0.2218,0.2458,0.2773
+Which statement best describes per-ID DLC validity in this window relative to baseline?,524,136,126,141,121,0.2595,0.2405,0.2691,0.2309
+Which statement best describes timestamp ordering in this window?,563,124,142,148,149,0.2202,0.2522,0.2629,0.2647
+Which timing pattern is most consistent with this window?,541,122,137,156,126,0.2255,0.2532,0.2884,0.2329
+Which traffic pattern best describes how frames are distributed across CAN IDs?,575,137,141,164,133,0.2383,0.2452,0.2852,0.2313
